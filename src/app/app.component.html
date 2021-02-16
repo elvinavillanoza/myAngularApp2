@@ -1,24 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Animations</h1>
-      <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
-      <button class="btn btn-primary" (click)="onShrink()">Shrink!</button>
+      <h1 style="text-align: center;">To-do Checklist</h1>
       <hr>
-      <div 
-      style="width: 100px; height: 100px"
-      [@divState]="state"
-      (@divState.start)="animationStarted($event)"
-      (@divState.done)="animationEnded($event)">
-    </div>
-    <br>
-    <div 
-    style="width: 100px; height: 100px"
-    [@wildState]="wildState">
-  </div>
-  </div>
-  </div>
-  <hr>
   <div class="row">
     <div class="col-xs-12">
       <input type="text" #input>
@@ -35,17 +19,4 @@
       </ul>
     </div>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-xs-12">
-      <ul class="list-group">
-        <li
-          class="list-group-item"
-          (click)="onDelete(item)"
-          [@list2]
-          *ngFor="let item of list">
-          {{ item }}
-        </li>
-      </ul>
-    </div>
 </div>
